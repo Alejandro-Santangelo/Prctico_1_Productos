@@ -18,7 +18,7 @@ namespace Productos.Server.Controllers
         }
 
         [HttpPost]
-        [Route("    'AGREGAR PRODUCTO'")]
+        [Route("/AGREGAR_PRODUCTO")]
 
         public async Task<IActionResult>CrearProducto(Producto producto)//metodo para guardar un producto en la bd 
         {
@@ -29,7 +29,7 @@ namespace Productos.Server.Controllers
         }
 
         [HttpGet]
-        [Route("    'VER LISTADO DE PRODUCTOS'")]
+        [Route("/VER_LISTADO_DE_PRODUCTOS")]
 
         public async Task<ActionResult<IEnumerable<Producto>>> ListaProductos()
         {
@@ -37,7 +37,7 @@ namespace Productos.Server.Controllers
             return Ok(productos);
         }
         [HttpGet]
-        [Route("    'VER PRODUCTO'")]
+        [Route("/VER_PRODUCTO")]
 
         public async Task<IActionResult>VerProducto(int id)
         {
@@ -52,7 +52,7 @@ namespace Productos.Server.Controllers
         }
 
         [HttpPut]
-        [Route("    'MODIFICAR PRODUCTO'")]
+        [Route("/MODIFICAR_PRODUCTO")]
 
         public async Task<IActionResult> ActualizarProducto(int id, Producto producto)
         {
@@ -66,7 +66,7 @@ namespace Productos.Server.Controllers
         }
 
         [HttpDelete]
-        [Route("    'BORRAR PRODUCTO'")]
+        [Route("/BORRAR_PRODUCTO")]
 
         public async Task<IActionResult> EliminarProducto(int id)
         {
